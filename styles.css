@@ -1,0 +1,244 @@
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body{
+  height: 100%;
+  background-image: linear-gradient(
+        135deg,
+        #091428 0%,
+        #1a2d5d 20%,
+        #4d4ba6 55%,
+        #75b7ea 100%
+  );
+  font-family: 'Roboto Mono', monospace;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  overflow-y: hidden;
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+}
+button{
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+}
+.welcome{
+  color: white;
+  text-align: left;
+}
+.welcome_name{
+  font-weight: 600;
+  grid-area: areaName;
+}
+.welcome_title{
+  font-weight: 100;
+  grid-area: areaTitle;
+}
+.welcome_logo{
+  grid-area: areaLogo;
+  min-width: 180px;
+  max-width: 250px;
+}
+.welcome_container{
+  display: grid;
+
+}
+
+/* handles collapsing projects */
+.projects_container{
+  width: 50%;
+  max-width: 700px;
+  min-width: 300px;
+  margin: auto;
+  display: grid;
+  grid-row-gap: 3px;
+}
+.project_collapsible {
+  /* background-color: #777;
+  color: white; */
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.active, .project_collapsible:hover {
+  background-color: lightgray;
+}
+.project_collapsible:before {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active:before {
+  content: "\2212";
+}
+.project_content {
+  padding: 0 18px;
+  max-height: 0;
+  /* overflow: hidden; */
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+}
+.project_content a{
+  color: black;
+}
+
+
+
+@media only screen and (max-width: 690px) {
+  .welcome_name{
+    font-size: 4em;
+    text-align: center;
+  }
+  .welcome_title{
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .welcome_container{
+    grid-template:
+    'areaLogo'
+    'areaName'
+    'areaTitle';
+  }
+  .welcome_logo{
+    width: 30vw;
+    justify-self: center;
+    align-self: start;
+  }
+
+  #Skills_container p{
+    font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 691px) {
+  .welcome_name{
+    font-size: 6em;
+  }
+  .welcome_title{
+    font-size: 4em;
+  }
+  .welcome_logo{
+    width: 30vw;
+    justify-self: end;
+  }
+  .welcome_container{
+    grid-template:
+    'areaName areaName areaName areaLogo'
+    'areaTitle areaTitle areaTitle areaTitle';
+  }
+}
+
+.selection_container{
+  color: white;
+  width: 40%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-column-gap: 5px;
+  justify-content: center;
+}
+
+.project_title, .skills_title, .contacts_title{
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active_selection{
+  text-decoration: underline;
+}
+
+.separator_title{
+  text-align: center;
+}
+
+.skills_container{
+  color: white;
+  display: none;
+  grid-column-gap: 5%;
+  grid-row-gap: 2px;
+  grid-template-columns: 40% 40%;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+/* Container for skill bars */
+.skill_item {
+  width: 100%;
+  background-color: white;
+
+}
+
+.skills {
+  text-align: right;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: grey;
+  height: 100%;
+}
+.skill_item_title {
+  font-size: 1.2em;
+  text-align: right;
+}
+
+.cpp {width:85%;}
+.python {width: 80%;}
+.java {width: 75%;}
+.js {width: 60%;}
+.html {width: 60%;}
+.css {width: 60%;}
+.unix {width: 30%;}
+
+.contacts_container{
+  color: white;
+  display: none;  
+  width: 30%;
+  margin: auto;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  grid-column-gap: 10px;
+}
+.contacts_container .fa{
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.contacts_container a{
+  color: white;
+}
+.contacts_container .fa:hover {
+ opacity: 0.8;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
