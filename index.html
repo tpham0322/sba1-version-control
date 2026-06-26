@@ -1,24 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic HTML Page</title>
-  </head>
-  
-  
-  <body>
-
-    <header>
-        <h1>Welcome</h1>
-    </header>
-
-    <h1>Hello, world!</h1>
-    <p>This is a basic HTML page.</p>
-  </body>
+	<head>
 
 
-  <footer>
-        <p>Copyright 2030</p>
-    </footer>
+		<title>Pham Project - Home Page</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;600&display=swap" rel="stylesheet">
+
+		<script src="https://kit.fontawesome.com/ab0dedc893.js" crossorigin="anonymous"></script>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Truong Pham's projects in data analysis and software development.">
+
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="index_entree_pic.css">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+
+		<meta property="og:title" content="Pham Project" />
+	</head>
+
+	<body>
+
+		<div class="welcome_container">
+			<div class="welcome welcome_name">TRUONG</br>PHAM</div>
+			<div class="welcome_logo"><a href=""><img class="logo" src="Cagle_Project_Logo.svg" alt="Cagle Project Logo"></a></div>
+			<div class="welcome welcome_title">DATA ANALYSIS &</br>SOFTWARE DEVELOPMENT</div>
+		</div>
+
+		<div class="selection_container" id="selection_container">
+			<h2 class="project_title selection_titles active_selection" onclick="funcSelectProjOrSkill(this);" id="selection_item_Projects">Projects</h2>
+			<h2 class="separator_title selection_titles"> | </h2>
+			<h2 class="skills_title selection_titles" onclick="funcSelectProjOrSkill(this);" id="selection_item_Skills">Skills</h2>
+			<h2 class="separator_title selection_titles"> | </h2>
+			<h2 class="contacts_title selection_titles" onclick="funcSelectProjOrSkill(this);" id="selection_item_Contact">Contacts</h2>
+		</div>
+
+		<div class="projects_container hideable_containers" id="Projects_container">
+
+      <!--Update the description for this project and the github link-->
+			<button class="project_collapsible">Impact Report Application</button>
+			<div class="project_content">
+			  <p></p>
+			</div>
+
+
+			<button class="project_collapsible">Machine Learning Brain MRI scans</button>
+			<div class="project_content">
+			  <p>A machine learning model built using Python and TensorFlow to classify brain MRI scans as either healthy or unhealthy. The model was trained on a dataset of 1000 MRI scans. </p>
+			</div>
+
+		</div>
+
+
+		<div class="skills_container hideable_containers" id="Skills_container">
+			<p class="skill_item_title">C++ <i class="fas fa-code"></i></p>
+			<div class="skill_item">
+			  <div class="skills cpp"></div>
+			</div>
+			
+			<p class="skill_item_title">Python <i class="fab fa-python"></i></p>
+			<div class="skill_item">
+			  <div class="skills python"></div>
+			</div>
+
+			<p class="skill_item_title">Java <i class="fab fa-java"></i></p>
+			<div class="skill_item">
+			  <div class="skills java"></div>
+			</div>
+
+			<p class="skill_item_title">Javascript <i class="fab fa-js"></i></p>
+			<div class="skill_item">
+			  <div class="skills js"></div>
+			</div>
+
+			<p class="skill_item_title">HTML <i class="fab fa-html5"></i></p>
+			<div class="skill_item">
+			  <div class="skills html"></div>
+			</div>
+
+			<p class="skill_item_title">CSS <i class="fab fa-css3"></i></p>
+			<div class="skill_item">
+			  <div class="skills css"></div>
+			</div>
+
+			<p class="skill_item_title">Unix Tools <i class="fab fa-linux"></i></p>
+			<div class="skill_item">
+			  <div class="skills unix"></div>
+			</div>
+		</div>
+
+
+
+		<div class="contacts_container hideable_containers" id="Contacts_container">
+			<a href="mailto:truongpham1173@gmail.com" class="fa fa-google"></a>
+			<p>Email: <a href="mailto:truongpham1173@gmail.com">truongpham1173@gmail.com</a></p>
+			<a href="https://www.linkedin.com/in/truong-pham1173/" class="fa fa-linkedin" target="_blank"></a>
+			<p><a href="https://www.linkedin.com/in/truong-pham1173/" target="_blank">LinkedIn Profile for Truong Pham</a></p>
+		</div>
+
+
+
+	</body>
+	<!-- You found my hidden secret!
+	     Have a youtube video.
+		 	https://www.youtube.com/watch?v=a51VH9BYzZA
+	-->
 </html>
